@@ -24,10 +24,10 @@ app.get('/resta/:numero1/:numero2', (req, res) =>{
     let numero2 = Number(req.params.numero2);
     let resultado = numero1 - numero2;
     console.log(resultado);
-    if (resultado || resultado) {
+    if (numero1 > 0 & numero2 > 0 ) {
         res.status(200).send(`${resultado} es una resta correcta`)
     } else {
-        res.status(400).send(`${resultado} es una resta incorrecta`)
+        res.status(400).send(`No se puede resta: ${resultado}`)
     }        
 });
 
